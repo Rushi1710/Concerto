@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #target {
+            width: 500px;
+            height: 300px;
+            border: 2px solid;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <canvas id="myCanvas" width="500" height="350" style="border:2px solid"></canvas> -->
+    <div id="target" ondragover="dragover(event)" ondrop="dropImage(event)"></div>
+    <div id="div2">
+        <img src="download.jpg" width="200px" height="200px" id="a" draggable="true" ondragstart="drag(event)">
+    </div>
+    <input type="file" id="file selctor">
+    <script>
+
+        // when the drag of the img starts
+        function drag(event) {
+
+            //set the operation load
+            event.dataTransfer.effectAllowed = "move";
+            // data transfer = id of image
+            event.dataTransfer.setData('text', event.target.getAttribute('id'))
+        }
+        //
+        function dropImage(event) {
+            event.preventDefault();
+            var data = event.dataTransfer.getData('text');
+            event.target.appendChild(document.getElementById(data));
+
+        }
+        function dragover(event) {
+            event.preventDefault();
+        }
+        
+    </script>
+</body>
+
+</html>

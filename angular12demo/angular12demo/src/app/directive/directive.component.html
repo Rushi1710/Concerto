@@ -1,0 +1,10 @@
+<h1>custom directive</h1>
+<select class="form-select mb-5" [(ngModel)]="bike">
+    <option value="Honda.jpg">HONDA</option>
+    <option value="Hero.jpg">HERO</option>
+    <option value="Tvs.jpg">TVS</option>
+    <option value="Royal.jpg">ROYAL</option>
+</select>
+<img src="../../assets/images/Hero.jpg" appHover [img1]="bike" width="300" height="300">
+
+<p appHover >Lorem </p>

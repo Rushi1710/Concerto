@@ -1,0 +1,36 @@
+/*  
+selector{
+    property: value
+}
+id #
+class .
+
+*/
+h1{
+    /* color: #7C3C07 ;*/
+    color: rgb(223, 226, 43);
+}
+/* only p tags with class attribute value as P1 */
+p.p1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 27px;
+}
+.green{
+    color: blanchedalmond;
+}
+.bgyellow{
+    background-color: yellow;
+}
+.cur{
+    font-family: 'Times New Roman', Times, serif;
+}
+div p{
+    color: blueviolet;
+}
+.outer > p{
+    font-size: 30px;
+}
+/* sibling */
+.outer ~ p{
+    background-color: crimson;
+}

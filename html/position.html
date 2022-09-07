@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         #pos div{
+            padding: 20px;
+            margin: 10px;
+            font-size: 25px;
+        }
+        #st{
+            position:static;
+            background-color: aliceblue;
+            color: blue;
+        }
+        #fix{
+            position:fixed;
+            background-color: yellow;
+            color: blue;
+            top: 0%;
+            width: 50% ;
+            right: 10px;
+            left: 25%;
+        }
+        #abs{
+            position:static;
+            background-color: black;
+            color: white;
+            top : 10px;
+            left: 50%;
+        }
+        #rel{
+            position:static;
+            background-color: green;
+            color: yellow;
+            top: 0%;
+        }
+        .img{
+            background-size: 1000px
+        }
+       
+    </style>
+</head>
+<body>
+    https://codebunk.com/b/5751100510148/
+    <div id="pos">
+        <div id="st">
+            <p>Content for static position</p>
+        </div>
+        <div id="fix">
+            <p>Content for fixed position</p>
+        </div>
+        <div id="abs">
+            <p>Content for absolute position</p>
+        </div>
+        <div class="img">
+            <img src="./image/download.jpg" >
+        
+        <div id="rel">
+            <p>Content for relative position</p>
+        </div>
+    </div>
+    </div>
+    
+</body>
+</html>

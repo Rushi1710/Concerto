@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ground</title>
+    <style>
+        #myCanvas {
+            background-color: green;
+            border: 1px solid;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="1000" height="500">
+    </canvas>
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        //middle line
+        ctx.strokeStyle = 'white';
+        ctx.lineWidth = "5"
+        ctx.moveTo(500, 0);
+        ctx.lineTo(500, 500);
+        ctx.stroke();
+
+        // middle circle
+        ctx.beginPath();
+        ctx.arc(500, 250, 70, 0, 2 * Math.PI);
+        ctx.stroke();
+        // inner cir of middle
+        ctx.beginPath();
+        ctx.arc(500, 250, 10, 0, 2 * Math.PI);
+        ctx.fillStyle = "white";
+        ctx.stroke();
+
+        ctx.fill();
+
+        // white border
+        ctx.beginPath();
+        ctx.lineWidth = "20";
+        ctx.strokeStyle = "white";
+        ctx.rect(0, 0, 1000, 500);
+        ctx.stroke();
+
+        // blue border
+        ctx.beginPath();
+        ctx.lineWidth = "15";
+        ctx.strokeStyle = "blue";
+        ctx.rect(0, 0, 1000, 500);
+        ctx.stroke();
+        // yellow border
+        ctx.beginPath();
+        ctx.lineWidth = "10";
+        ctx.strokeStyle = "yellow";
+        ctx.rect(0, 0, 1000, 500);
+        ctx.stroke();
+
+        //red border
+        ctx.beginPath();
+        ctx.lineWidth = "5";
+        ctx.strokeStyle = "red";
+        ctx.rect(0, 0, 1000, 500);
+        ctx.stroke();
+
+        // left side squre
+        ctx.beginPath();
+        ctx.lineWidth = "5";
+        ctx.strokeStyle = "white";
+        ctx.rect(10, 100, 100, 300);
+        ctx.stroke();
+
+        // left side inner squre 
+        ctx.beginPath();
+        ctx.lineWidth = "5";
+        ctx.strokeStyle = "white";
+        ctx.rect(10, 175, 50, 150);
+        ctx.stroke();
+
+        // right side squar
+        ctx.beginPath();
+        ctx.lineWidth = "5";
+        ctx.strokeStyle = "white";
+        ctx.rect(890, 100, 100, 300);
+        ctx.stroke();
+
+        // right side inner squar
+        ctx.beginPath();
+        ctx.lineWidth = "5";
+        ctx.strokeStyle = "white";
+        ctx.rect(940, 175, 50, 150);
+        ctx.stroke();
+        
+        
+    </script>
+</body>
+
+</html>

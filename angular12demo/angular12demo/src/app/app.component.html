@@ -1,0 +1,51 @@
+<!-- header component :=  <app-header></app-header> -->
+<!-- <app-header></app-header> -->
+
+<!-- <app-directive></app-directive>
+<app-parent></app-parent>  -->
+<!-- <app-empform (empadded)="newEmpAdded($event)"></app-empform>
+<app-main [newemp]="employee"></app-main> -->
+<!-- <app-empreactiveform></app-empreactiveform> -->
+<h1>App component</h1>
+<p>{{service.message}}</p>
+<app-serv></app-serv>
+
+<div>
+  <button (click)="getTodos()">Get All todos</button>
+  <button (click)="getTodoById(1)">Get Todo</button>
+  <button (click)="postTodo()">Post todos</button>
+  <button (click)="deleteTodo()">Delete todos</button>
+  <button (click)="updateTodo()">Update todos</button>
+</div>
+
+<!-- <hr>
+<div class="container">
+  <app-pipe></app-pipe>
+</div> -->
+<!-- <app-employee></app-employee>
+<div class="container">
+  <h1 class="head text-center">concerto {{title}}</h1>
+  <p>{{2+2}}</p>
+  <p>{{bod}}</p>
+  <p>{{display()}}</p>
+  <p class="container"></p>
+  <p innerText={{message}}></p>
+  <p [innerText]=message></p>
+  <p>{{isInValid}}</p> -->
+  <!-- event binding -->
+  <!-- <input type="checkbox" [(ngModel)]="isInValid" />
+  <p> -->
+    <!-- style binding -->
+    <!-- <button [disabled]=isInValid [style.color]="'red'" (click)="clicked()">Check Validity</button>
+  </p>
+  <p>
+    <button [disabled]=isInValid [style.color]="red" (click)="clicked()">Check Validity</button>
+  </p>
+  <p>
+    <button [disabled]=isInValid [style.color]="isInValid ? 'red' :'green'" (click)="clicked()">Check Validity</button>
+  </p> -->
+  <!-- 2 -way data binding [()] banana in a box -->
+  <!-- <input type="text" [(ngModel)]='message'>
+  <br> -->
+  <!-- <input type="checkbox" [(ngModel)]='isInValid'>Check -->
+<!-- </div> -->
