@@ -1,4 +1,9 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import {  ActivatedRoute, Router } from '@angular/router';
+import { emp } from '../data/data';
+import { Employee } from '../model/employee';
+import { EmphttpService } from '../services/emphttp.service';
+//import { EmphttpService } from '../service/emphttp.service';
 
 @Component({
   selector: 'app-main',
@@ -6,34 +11,22 @@ import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/cor
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit,OnChanges {
-  @Input()
-  newemp:any;
-  nos: number[] = [1, 2, 34, 5, 6,];
-  employees: any[] = [];
-  constructor() {
-    this.employees = [
-      {
-        eid: 1, ename: 'shalini',
-        email: 'shalini@gmail.com', phone: '1321312312'
-        , address: { country: 'India' }
-      },
-      {
-        eid: 2, ename: 'shalini123',
-        email: 'shalini@gmail.com', phone: '1321312312'
-        , address: { country: 'India' }
-      },
-      {
-        eid: 3, ename: 'shalini789',
-        email: 'shalini@gmail.com', phone: '1321312312'
-        , address: { country: 'India' }
-      }
-    ]
+
+  nos:number[] = [1,2,3,4,5,6,7,8,9];
+
+  public employees:Employee[] =[];
+  isEdit:boolean = true;
+  employee:Employee | null;
+  constructor(private empservice:EmphttpService,private router:Router,private route:ActivatedRoute) { 
+    this.employee=null;
+    
   }
   ngOnChanges(changes: SimpleChanges): void {
-    if(this.newemp !== undefined)
-    this.employees.push(this.newemp)
+    if(this.newdata !== undefined)
+    this.employees.push(this.newdata);
+    console.log(this.employees)
   }
-
+  
   people: any[] = [
     {
     "name": "Douglas Pace",
@@ -56,7 +49,29 @@ export class MainComponent implements OnInit,OnChanges {
     "country": 'USA'
     }
     ];
-  ngOnInit(): void {
-  }
 
-}
+    selid:number = 0;
+    ngOnInit(): void {
+      //this.route.params.subscribe(params => this.selid = params.id)
+      this.route.queryParams.subscribe(params => this.selid = params.id)
+      this.empservice.getAllEmployees().subscribe(data=>this.employees=data)
+  
+    }
+    @Input()
+    newdata:any={};
+    delete(emp:Employee)
+    {
+      let objindx = this.employees.findIndex(employee=>employee.eid === emp.eid);
+      this.employees.splice(objindx,1)
+    }
+    edit(emp:Employee)
+    {
+      this.isEdit = !this.isEdit
+      this.employee = emp;
+      console.log(this.employee)
+    }
+    view(id:number){
+      console.log(id);
+      this.router.navigate([id],{relativeTo:this.route})
+    }
+  }

@@ -1,0 +1,16 @@
+<div class="container" >
+    <div class="main1">
+        <div *ngIf="employee !== null">
+            <p>Eid:{{employee.eid}}</p>
+            <p>Name:{{employee.ename}}</p>
+            <p>Email:{{employee.email}}</p>
+            <p>Phone:{{employee.phone}}</p>
+            <p>Address:{{employee.address.country}}</p>
+            <button (click)="back(employee.eid)">Back</button>
+            <button (click)="displayAddress()"> View Address</button>
+            
+        </div>
+        
+    </div>
+</div>
+<router-outlet></router-outlet>

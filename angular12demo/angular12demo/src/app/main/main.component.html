@@ -1,33 +1,31 @@
-<div class="container" *ngIf="nos.length > 0">
-    <!-- <p *ngFor = "let no of nos">{{nos}}</p>
-</div>
-<div class="container" *ngIf="nos.length >= 0">
-    <h1 >No items to display</h1>
-</div> -->
-<div class="container" *ngIf="employees.length > 0">
-    <div *ngFor = "let employee of employees">
-        <p>id :{{employee.eid}}</p>
-        <p>ename:{{employee.ename}}</p>
-        <p>country:{{employee.address.country}}</p>
+<div class="container">
+    <!-- <div  *ngIf="nos.length > 0 ; else none">
+        <p  *ngFor="let no of nos">{{no}}</p>
     </div>
-</div>
-<hr>
-<div class="container" *ngif="employees.length >= 0">
-    <h1 >No Employee</h1>
-</div>
+    <ng-template class="container" #none>
+        <h1>No items to display</h1>
+    </ng-template > -->
 
-<div></div>
-<!-- <h1 class="container">List of People</h1>
-<div class="container" *ngFor="let p of people" [ngSwitch]="p.country">
-
-    <div *ngSwitchCase="'UK'" class="text-success">
-        <p>{{p.name}}:{{p.country}}</p>
+    <div class="container" *ngIf="employees.length > 0">
+        <div *ngFor="let emp of employees">
+           <app-employee [employee]="emp"></app-employee>
+        </div>
+    </div>
+    <div class="container" *ngIf="employees.length <= 0">
+        <h1>No employees yet joined your company!!!</h1>
     </div>
 
-    <div *ngSwitchCase="'USA'" class="text-warning">
-        <p>{{p.name}}:{{p.country}}</p>
-    </div>
-
-    <div *ngSwitchCase="'MARS'" class="text-danger">
-        <p>{{p.name}}:{{p.country}}</p>
+    <!-- <h1>List of people</h1>
+    <div *ngFor="let p of people" [ngSwitch]="p.country">
+        <div *ngSwitchCase="'UK'" class="text-success">
+            <p>{{p.name}} : {{p.country}}</p>
+        </div>
+        <div *ngSwitchCase="'USA'" class="text-danger">
+            <p>{{p.name}} : {{p.country}}</p>
+        </div>
+        <div *ngSwitchCase="'MARS'" class="text-warning">
+            <p>{{p.name}} : {{p.country}}</p>
+        </div>
     </div> -->
+
+</div>

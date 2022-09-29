@@ -36,7 +36,7 @@ export class AppComponent {
 
   getTodos(){
     console.log('getting all todos');
-    this.service.getAllTodos().subscribe((data: any)=>console.log(data))
+    this.service.getAllTodos().subscribe(data=>console.log(data))
  }
   getTodoById(id:any){
 

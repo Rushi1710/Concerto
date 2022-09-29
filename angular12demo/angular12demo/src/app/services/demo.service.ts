@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -6,16 +7,16 @@ import { Injectable } from '@angular/core';
 export class DemoService {
 
   message:string;
-  httpservice: any;
-  constructor() { 
-    this.message = 'from service'
-    console.log('demo service');
+  constructor( public httpservice:HttpClient) { 
+    this.message='from service';
+    console.log('demo Serivce')
   }
   getAllTodos(){
-    console.log('get all todo in service')
-    return this.httpservice.get('https://jsonplaceholder.typicode.com/todos');
+    console.log('getAllTodos from services')
+    return this.httpservice.get('http://localhost:3000/empolyees')
   }
   setMessage(msg:string){
-    this,this.message=msg;
+    this.message=msg;
   }
+  
 }
