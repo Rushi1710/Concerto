@@ -5,7 +5,7 @@ const foodItem = [
       category: "biryani",
       rating: 4.3,
       price: 13,
-      img: "images/biryani/Ambur-Chicken-Biryani.jpg",
+      img: "images/biryani/Chicken-Biryani-hyd.jpg",
       quantity: 1,
     },
     {
@@ -14,7 +14,7 @@ const foodItem = [
       category: "biryani",
       rating: 4.3,
       price: 15,
-      img: "images/biryani/Chicken-Biryani-hyd.jpg",
+      img: "images/biryani/Ambur-Chicken-Biryani.jpg", 
       quantity: 1,
     },
     {
@@ -23,7 +23,7 @@ const foodItem = [
       category: "biryani",
       rating: 4.3,
       price: 18,
-      img: "images/biryani/egg-biryani.jpeg",
+      img: "images/biryani/goan-fish-biryani.jpg", 
       quantity: 1,
     },
     {
@@ -32,7 +32,7 @@ const foodItem = [
       category: "biryani",
       rating: 4.3,
       price: 15,
-      img: "images/biryani/goan-fish-biryani.jpg",
+      img: "images/biryani/egg-biryani.jpeg",
       quantity: 1,
     },
     {
@@ -59,7 +59,7 @@ const foodItem = [
       category: "biryani",
       rating: 4.3,
       price: 13,
-      img: "images/biryani/kashmiri.pulao.jpg",
+      img: "images/biryani/memonibiryani.png",
       quantity: 1,
     },
     {
@@ -68,7 +68,7 @@ const foodItem = [
       category: "biryani",
       rating: 4.3,
       price: 20,
-      img: "images/biryani/memonibiryani.png",
+      img: "images/biryani/kashmiri.pulao.jpg",
       quantity: 1,
     },
     {
